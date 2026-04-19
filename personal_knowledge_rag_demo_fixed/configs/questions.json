@@ -1,0 +1,32 @@
+[
+  {
+    "id": "Q1",
+    "question": "Why does chunk overlap become necessary when small chunks lose context and ideas span across boundaries?",
+    "gold_doc_ids": ["rag_basics"],
+    "ground_truth": "Chunk overlap is necessary because when documents are split into small chunks, important ideas can fall across chunk boundaries. Without overlap, neither chunk may contain enough complete context to match the query well. Overlap repeats some text between adjacent chunks so boundary information remains recoverable."
+  },
+  {
+    "id": "Q2",
+    "question": "Why does hybrid retrieval work better when dense retrieval misses exact terms but keyword search captures them?",
+    "gold_doc_ids": ["vector_search"],
+    "ground_truth": "Hybrid retrieval works better because dense retrieval is strong for semantic meaning but may miss exact terms like codes, names, or version numbers. Keyword retrieval captures those exact matches. Combining both improves coverage and ranking quality."
+  },
+  {
+    "id": "Q3",
+    "question": "Why are FastAPI background tasks not reliable for heavy workloads and when should a task queue be used instead?",
+    "gold_doc_ids": ["fastapi_backend"],
+    "ground_truth": "FastAPI background tasks are not reliable for heavy workloads because they run in-process and do not provide durability, retries, or distributed execution. Heavy, slow, or mission-critical work should be handled by a proper task queue such as Celery."
+  },
+  {
+    "id": "Q4",
+    "question": "Why is SSG faster and cheaper while SSR is more flexible for dynamic or personalized content?",
+    "gold_doc_ids": ["nextjs_rendering"],
+    "ground_truth": "SSG is faster and cheaper because pages are prebuilt and can be served efficiently through a CDN. SSR is more flexible because pages are generated per request, which supports fresh, dynamic, or user-specific content."
+  },
+  {
+    "id": "Q5",
+    "question": "Why can an AI system return a fluent but incorrect answer and how does observability help detect such failures?",
+    "gold_doc_ids": ["testing_monitoring"],
+    "ground_truth": "AI systems can return fluent but incorrect answers because language models may generate plausible-sounding text even when the retrieved context is weak or wrong. Observability helps detect these failures through telemetry such as retrieved sources, latency, errors, and quality signals."
+  }
+]

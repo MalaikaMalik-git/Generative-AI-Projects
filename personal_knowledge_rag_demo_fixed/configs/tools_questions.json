@@ -1,0 +1,36 @@
+[
+  {
+    "id": "T1",
+    "question": "What is 25 * 8 + 10?",
+    "expected_route": "tool",
+    "expected_tool": "calculator",
+    "expected_answer": 210
+  },
+  {
+    "id": "T2",
+    "question": "What is 144 / 12 + 7?",
+    "expected_route": "tool",
+    "expected_tool": "calculator",
+    "expected_answer": 19
+  },
+  {
+    "id": "T3",
+    "question": "What date is 10 days after 2026-04-18?",
+    "expected_route": "tool",
+    "expected_tool": "date",
+    "expected_answer": "2026-04-28"
+  },
+  {
+    "id": "T4",
+    "question": "What date is 7 days before 2026-05-10?",
+    "expected_route": "tool",
+    "expected_tool": "date",
+    "expected_answer": "2026-05-03"
+  },
+  {
+    "id": "T5",
+    "question": "What is today's date?",
+    "expected_route": "tool",
+    "expected_tool": "today"
+  }
+]

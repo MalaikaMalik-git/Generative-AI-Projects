@@ -1,0 +1,11 @@
+strategy,question_id,question,gold_doc_ids,top1_doc,top3_docs,hit@1,hit@3,mrr,relevant_in_top3
+fixed,Q1,Why does chunk overlap become necessary when small chunks lose context and ideas span across boundaries?,rag_basics,rag_basics,rag_basics | rag_basics | rag_basics,1,1,1.0,3
+fixed,Q2,Why does hybrid retrieval work better when dense retrieval misses exact terms but keyword search captures them?,vector_search,vector_search,vector_search | vector_search | vector_search,1,1,1.0,3
+fixed,Q3,Why are FastAPI background tasks not reliable for heavy workloads and when should a task queue be used instead?,fastapi_backend,fastapi_backend,fastapi_backend | fastapi_backend | fastapi_backend,1,1,1.0,3
+fixed,Q4,Why is SSG faster and cheaper while SSR is more flexible for dynamic or personalized content?,nextjs_rendering,nextjs_rendering,nextjs_rendering | nextjs_rendering | nextjs_rendering,1,1,1.0,3
+fixed,Q5,Why can an AI system return a fluent but incorrect answer and how does observability help detect such failures?,testing_monitoring,testing_monitoring,testing_monitoring | testing_monitoring | deployment,1,1,1.0,2
+recursive,Q1,Why does chunk overlap become necessary when small chunks lose context and ideas span across boundaries?,rag_basics,rag_basics,rag_basics | rag_basics | rag_basics,1,1,1.0,3
+recursive,Q2,Why does hybrid retrieval work better when dense retrieval misses exact terms but keyword search captures them?,vector_search,vector_search,vector_search | vector_search | vector_search,1,1,1.0,3
+recursive,Q3,Why are FastAPI background tasks not reliable for heavy workloads and when should a task queue be used instead?,fastapi_backend,fastapi_backend,fastapi_backend | fastapi_backend | fastapi_backend,1,1,1.0,3
+recursive,Q4,Why is SSG faster and cheaper while SSR is more flexible for dynamic or personalized content?,nextjs_rendering,nextjs_rendering,nextjs_rendering | nextjs_rendering | nextjs_rendering,1,1,1.0,3
+recursive,Q5,Why can an AI system return a fluent but incorrect answer and how does observability help detect such failures?,testing_monitoring,testing_monitoring,testing_monitoring | testing_monitoring | testing_monitoring,1,1,1.0,3
