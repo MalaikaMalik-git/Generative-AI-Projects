@@ -1,0 +1,25 @@
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
+.env.local
+frontend/.env.local
+
+# ── Python ────────────────────────────────────────────────────────────────────
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# ── Logs / runtime data ───────────────────────────────────────────────────────
+cost_log.jsonl
+
+# ── Node / frontend ────────────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── OS / editor ────────────────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/

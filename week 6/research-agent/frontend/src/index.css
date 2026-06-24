@@ -1,0 +1,66 @@
+/* src/index.css — global resets + design tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color tokens */
+  --color-bg:          #0b0d10;
+  --color-surface:     #14171c;
+  --color-surface-2:   #1b1f26;
+  --color-border:      #262b33;
+  --color-text:        #e8e6e1;
+  --color-text-dim:    #8b9099;
+  --color-text-faint:  #565c66;
+  --color-accent:      #5eead4;
+  --color-accent-dim:  #2dd4bf33;
+  --color-error:       #f87171;
+  --color-error-bg:    #f8717114;
+
+  /* Type tokens */
+  --font-ui:   'Inter', -apple-system, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

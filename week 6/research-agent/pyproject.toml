@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "research-agent"
+version = "0.1.0"
+description = "Week 6 Demo — ReAct Research Agent with web search"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai>=1.30.0",
+    "ddgs>=9.0.0",        # DuckDuckGo search — no API key needed
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.7.0",       # pretty trace output in terminal
+    "gradio>=4.36.0",     # demo UI (Session 7)
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "responses>=0.25.0",  # mock HTTP calls in tests
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
