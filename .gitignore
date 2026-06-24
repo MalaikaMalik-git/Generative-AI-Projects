@@ -25,3 +25,4 @@ vector_store/
 
 # Jupyter
 .ipynb_checkpoints/
+**/.venv/
