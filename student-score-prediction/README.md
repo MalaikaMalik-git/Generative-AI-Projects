@@ -48,7 +48,8 @@ student-score-prediction/
 ## Roadmap
 
 - [x] Day 1 — Environment setup, project structure, first commit
-- [ ] Day 2–3 — Python fundamentals, NumPy, from-scratch linear regression
+- [x] Day 2 — Python fundamentals as tested utilities (`src/utils.py`, `tests/test_utils.py`)
+- [ ] Day 3 — NumPy, from-scratch linear regression
 - [ ] Day 4–5 — Data loading, cleaning, feature engineering
 - [ ] Day 6 — Exploratory data analysis + interactive dashboard
 - [ ] Day 7–8 — Model training, comparison, and experiment tracking (MLflow)
