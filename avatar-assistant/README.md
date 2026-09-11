@@ -8,11 +8,6 @@ and describe whatever you show it.
 Built as a one-day MVP: complete end-to-end experience, not a
 production-grade avatar.
 
-## Live demo
-- **Deployed link:** *(fill in after following `DEPLOYMENT.md`)*
-- **Backup demo video:** *(fill in — see `DEMO_CHECKLIST.md` for how to record it)*
-- **Repository:** *(this repo's URL)*
-
 ## Features
 - 🗣️ **Voice in** — hold the mic button, ask a question, release
 - 🔊 **Voice out** — answers are read aloud, avatar animates while talking
@@ -99,15 +94,6 @@ Open **http://localhost:5173**. Allow microphone and camera permissions
 when prompted (or don't — the app degrades gracefully to text-only, see
 Limitations below).
 
-For deploying to a public URL, see **`DEPLOYMENT.md`**.
-
-## Sample questions
-See **`DEMO_CHECKLIST.md`** for a full demo script. Quick picks:
-- *"What does Agentix System do?"* — grounded, should answer confidently
-- *"What AI agents does Agentix offer?"* — grounded, lists their 4 agents
-- *"Who is Agentix's biggest competitor?"* — **not** covered by the site
-  content; should honestly say it doesn't know rather than guess
-- Show it any physical object and ask *"what is this?"*
 
 ## Limitations
 Being upfront about what this MVP does and doesn't do:
@@ -122,8 +108,7 @@ Being upfront about what this MVP does and doesn't do:
   was an explicit scope cut in the project plan to keep the timeline
   realistic.
 - **No literal blinking.** The chosen avatar model (RobotExpressive, a
-  robot) has no eyelids; a small head-tic substitutes for it. Documented
-  in `frontend/SESSION4_README.md`.
+  robot) has no eyelids; a small head-tic substitutes for it.
 - **Browser-dependent voice input.** Speech-to-text is reliable in
   Chrome/Edge, partial in Safari, and off by default in Firefox. Text
   input always works regardless — **demo in Chrome**.
@@ -145,7 +130,6 @@ Being upfront about what this MVP does and doesn't do:
 avatar-assistant/
 ├── README.md              ← you are here
 ├── DEPLOYMENT.md           deployment steps (Render + Vercel)
-├── DEMO_CHECKLIST.md       demo script + backup video recording guide
 ├── backend/
 │   ├── main.py             FastAPI app: /health, /chat, /vision
 │   ├── rag.py               ChromaDB retrieval
@@ -156,7 +140,7 @@ avatar-assistant/
 │   ├── data/raw/            scraped agentixsystem.com content
 │   ├── data/chroma_db/      vector store (built by ingest.py)
 │   ├── scripts/             scrape.py, ingest.py, test_retrieval.py
-│   └── SESSION{2,3,6}_README.md   deep-dive docs per feature
+│ 
 └── frontend/
     ├── src/
     │   ├── App.jsx                     top-level layout
@@ -168,19 +152,4 @@ avatar-assistant/
     │   └── useTextToSpeech.js           voice output hook
     ├── public/models/RobotExpressive.glb
     ├── .env.example
-    └── SESSION{4,5}_README.md          deep-dive docs per feature
 ```
-
-## Development history
-This was built session-by-session against a one-day plan. Each session
-has its own README with what was built, what was tested (and how), and
-troubleshooting specific to that feature:
-- `backend/SESSION2_README.md` — RAG pipeline (scraping, chunking, embeddings)
-- `backend/SESSION3_README.md` — chat endpoint
-- `frontend/SESSION4_README.md` — 3D avatar
-- `frontend/SESSION5_README.md` — voice in/out
-- `backend/SESSION6_README.md` — camera vision
-
-Note: development sessions 3 and 6 were originally built against
-Anthropic's Claude API and switched to OpenAI's `gpt-4o-mini` partway
-through — those two READMEs reflect the final OpenAI-based implementation.
